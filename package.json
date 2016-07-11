@@ -1,0 +1,31 @@
+{
+  "name": "node-express-angular",
+  "version": "1.0.0",
+  "description": "sample application using node,express and angular",
+  "main": "index.js",
+  "engines": {
+    "node": "4.4.4"
+  },
+  "scripts": {
+     "postinstall": "./node_modules/bower/bin/bower install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nagendramca2011/node-express-angular.git"
+  },
+  "keywords": [
+    "angular",
+    "express",
+    "node"
+  ],
+  "author": "Padamara Nagendra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nagendramca2011/node-express-angular/issues"
+  },
+  "homepage": "https://github.com/nagendramca2011/node-express-angular#readme",
+  "dependencies": {
+    "bower": "^1.7.9",
+    "express": "^4.14.0"
+  }
+}
