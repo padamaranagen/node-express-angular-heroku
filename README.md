@@ -7,7 +7,7 @@ git clone https://github.com/nagendramca2011/node-express-angular.git
 3.	Navigate to above directory
 C:\>cd node-express-angular
 4.	Initialize npm
-
+```
 C:\node-express-angular>npm init
 This utility will walk you through creating a package.json file.
 It only covers the most common items, and tries to guess sensible defaults.
@@ -58,9 +58,9 @@ About to write to C:\node-express-angular\package.json:
 
 Is this ok? (yes) Yes
 
-
+```
 5.	Add Express Dependencies
-
+```
 C:\node-express-angular>npm install express --save
 express@4.14.0 node_modules\express
 ├── escape-html@1.0.3
@@ -90,9 +90,9 @@ express@4.14.0 node_modules\express
 ├── accepts@1.3.3 (negotiator@0.6.1, mime-types@2.1.11)
 └── send@0.14.1 (destroy@1.0.4, ms@0.7.1, statuses@1.3.0, mime@1.3.4, http-error
 s@1.5.0)
-
+```
 6.	See which was added or not
- 
+ ```
 C:\node-express-angular>type package.json
 {
   "name": "node-express-angular",
@@ -121,12 +121,12 @@ C:\node-express-angular>type package.json
     "express": "^4.14.0"
   }
 }
-
+```
 7.	Add Bower Dependency
 C:\node-express-angular>npm install bower --save
 bower@1.7.9 node_modules\bower
 8.	Check bower is installed or not
-
+```
 C:\node-express-angular>type package.json
 {
   "name": "node-express-angular",
@@ -156,10 +156,12 @@ C:\node-express-angular>type package.json
     "express": "^4.14.0"
   }
 }
+```
 9.	Which version of node you working that you need to add it in package.json
 C:\node-express-angular>node -v
 v4.4.4
 
+```
 C:\node-express-angular>type package.json
 {
   "name": "node-express-angular",
@@ -192,9 +194,9 @@ C:\node-express-angular>type package.json
     "express": "^4.14.0"
   }
 }
-
+```
 10.	We need to specify the path of the bower install inside package.json file
-
+```
 C:\node-express-angular>type package.json
 {
   "name": "node-express-angular",
@@ -227,10 +229,11 @@ C:\node-express-angular>type package.json
     "express": "^4.14.0"
   }
 }
-
+```
 11.	Express as a webserver
 Create a new file in the root of your project named app.js to server static files.
 app.js
+```
 var express = require('express');
 var app = express();
 app.use(express.static(__dirname + '/public'));
@@ -238,6 +241,7 @@ var port = process.env.PORT || 8000;
 app.listen(port, function(){
         console.log('listening on', port);
 });
+```
 12.	Define a Procfile
 We need to tell Heroku what it needs to do to start your app : Create file named Procfile in the root of your project and add :
 
@@ -251,7 +255,7 @@ node_modules
 public/bower_components
 
 14.	Front-end dependencies creation using below
-
+```
 C:\node-express-angular>bower init
 ? name node-express-angular
 ? description sample application using node,express and angular
@@ -289,14 +293,16 @@ cidentally published to the registry? No
 }
 
 ? Looks good? Yes
-
+```
 15.	Add the dependencies
+```
     "bootstrap": "3.3.6",
     "angular": "^1.5.5",
     "angular-route": "^1.5.6",
     "font-awesome": "^4.6.3"
-
+```
 C:\node-express-angular>type bower.json
+```
 {
   "name": "node-express-angular",
   "description": "sample application using node,express and angular",
@@ -325,9 +331,9 @@ C:\node-express-angular>type bower.json
     "font-awesome": "^4.6.3"
   }
 }
-
+```
 16.	 Install bower dependencies using 
-
+```
 C:\node-express-angular>bower install
 bower cached        https://github.com/twbs/bootstrap.git#3.3.6
 bower validate      3.3.6 against https://github.com/twbs/bootstrap.git#3.3.6
@@ -360,14 +366,14 @@ bootstrap#3.3.6 bower_components\bootstrap
 └── jquery#2.2.4
 
 jquery#2.2.4 bower_components\jquery
-
+```
 17.	Add .bowerrc files and add 
 
 {
   "directory": "public/bower_components"
 }
 18.	 Copy sample project folder
-
+```
 C:\node-express-angular\public>tree /f
 Folder PATH listing
 Volume serial number is 5EF4-DE84
@@ -398,4 +404,4 @@ C:.
         header.html
 
 
-
+```
